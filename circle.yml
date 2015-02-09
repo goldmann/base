@@ -4,6 +4,8 @@ machine:
 
 dependencies:
   override:
+    - docker -v
     - docker info
     - docker pull jboss/base
+    - docker pull fedora:20
     - docker build -t jboss/base .
